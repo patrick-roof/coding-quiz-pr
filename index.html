@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Coding Quiz</title>
+</head>
+
+<body>
+    <div class="outer-container">
+
+        <div class="top-bar">
+            <button class="btn">View Highscores</button>
+            <p id="counter">Timer: 01:00</p>
+        </div>
+
+        <div class="inner-container">
+
+            <!-- phase 1 - start screen -->
+
+            <header id="quiz-intro" class="quiz-intro">
+                <h2>Coding Quiz Challenge</h2>
+                <p>Answer the questions as quickly as possible to earn points. Wrong answers will deduct time and points from your score. Good luck!</p>
+                <button id="start-button" class="start-button btn">Start</button>
+            </header>
+
+            <main>
+
+                <!-- phase 2 - questions -->
+
+                <section id="question-container" class="question-container hide">
+                    <h2 id="question">Question Here</h2>
+                    <div id="answer-buttons" class="answer-buttons">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                    <p id="correct" class="correct hide">Correct!</p>
+                    <p id="wrong" class="wrong hide">Oops, that's incorrect</p>
+                    <button id="next-button" class="next-button btn">Next</button>
+                </section>
+
+                <!-- phase 3 - quiz result -->
+
+                <section id="quiz-result-screen" class="quiz-result-screen hide">
+                    <h2>Done!</h2>
+                    <p id="score">Your score: 00</p>
+
+                    <lable for="">Enter Initials</lable>
+                    <input type="text">
+                    <button id="submitBtn" class="btn">Submit</button>
+                </section>
+
+                <!-- phase 4 - high score -->
+                <section id="highscore-screen" class="highscores-screen hide">
+                    <ol>
+                        <li>PR - XX</li>
+                        <li>PR - XX</li>
+                    </ol>
+                    <button>Go Back</button>
+                    <button>Clear Highscores</button>
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <script src="assets/script.js"></script>
+
+</body>
+
+</html>

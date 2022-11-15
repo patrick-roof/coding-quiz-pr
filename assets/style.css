@@ -1,0 +1,140 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:0;
+
+    /* border: 1px solid red; */
+
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(41, 41, 41);
+    overflow: hidden;
+}
+
+.quiz-intro, main {
+    display: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(67, 67, 67);
+    border-radius: 5px;
+}
+
+p {
+    margin: 5px;
+    font-size: 120%;
+    color: white;
+}
+
+.top-bar button {
+    margin: 5px;
+    outline: none;
+    font-size: 120%;
+}
+
+h1, h2 {
+    padding: 10px;
+    margin-left: 5px;
+    color: teal;
+}
+
+/* li {
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+} */
+
+.outer-container {
+    padding: 10px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.top-bar {
+    margin: 3%;
+}
+
+.top-bar p {
+    float:right;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn {
+    display:block;
+    background-color: blueviolet;
+    padding: 5px 10px;
+    margin:10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.5;
+    cursor: grab;
+}
+
+.next-button {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+.start-button {
+    margin: auto;
+}
+
+/*main quiz content*/
+
+main {
+    display: block;
+}
+
+.quiz-intro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    margin:10%;
+    line-height: 1.6;
+}
+
+.quiz-intro button {
+    margin-bottom: 10px;
+}
+
+/*question screen*/
+
+.question-container {
+    display: block;
+}
+
+/*quiz result screen*/
+
+.quiz-result-screen {
+    display: block;
+}
+
+/*high score screen*/
+
+.highscores-screen {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
