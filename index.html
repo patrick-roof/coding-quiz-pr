@@ -13,8 +13,8 @@
     <div class="outer-container">
 
         <div class="top-bar">
-            <button class="btn">View Highscores</button>
-            <p id="counter">Timer: 01:00</p>
+            <button id="highscore-button" class="btn">View Highscores</button>
+            <p>Timer: <span id="counter" class="counter">100</span></p>
         </div>
 
         <div class="inner-container">
@@ -39,8 +39,8 @@
                         <button class="btn">Answer 3</button>
                         <button class="btn">Answer 4</button>
                     </div>
-                    <p id="correct" class="correct hide">Correct!</p>
-                    <p id="wrong" class="wrong hide">Oops, that's incorrect</p>
+                    <p id="correct-message" class="correct-message hide">Correct!</p>
+                    <p id="wrong-message" class="wrong-message hide">Oops, that's incorrect</p>
                     <button id="next-button" class="next-button btn">Next</button>
                 </section>
 
@@ -48,7 +48,7 @@
 
                 <section id="quiz-result-screen" class="quiz-result-screen hide">
                     <h2>Done!</h2>
-                    <p id="score">Your score: 00</p>
+                    <p>Your score: <span id="score" class="score">00</span></p>
 
                     <lable for="">Enter Initials</lable>
                     <input type="text">
@@ -61,8 +61,8 @@
                         <li>PR - XX</li>
                         <li>PR - XX</li>
                     </ol>
-                    <button>Go Back</button>
-                    <button>Clear Highscores</button>
+                    <button id="go-back-button" class="btn">Go Back</button>
+                    <button id="clear-highscores" class="btn">Clear Highscores</button>
                 </section>
 
             </main>
