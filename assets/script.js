@@ -42,20 +42,29 @@ goBackButton.addEventListener('click', goBack);
 function getHighscores() {
     quizIntro.classList.add('hide');
     highscoreElement.classList.remove('hide');
-    //see renderLastRegistered on act22 - render highscores from local storage here?
-    var initials = localStorage.getItem('initials');
-    var score = localStorage.getItem('score');
-    var scores = localStorage.getItem('scores')
-    var liItem = document.createElement(
-        <li><span id="user-initials">PR</span> - <span id="user-score">XX</span></li>
-    )
 
-    for (let i = 0; i < 5; i++) {
-        liItem.innerText = `${scores[i].initials} - ${scores[i].score}`;
+    // gets the scores from local storage abd parses it
+    var scores = JSON.parse(localStorage.getItem('scores'))
+    // finds the highscore container
+    var container = document.getElementById('highscore-list');
+    // creates an ol
+    var ol = document.createElement('ol')
+
+    // clears highscore list when going back to the highscore page
+    container.innerHTML = ''
+
+    // creates the li items for the highscore ordered list
+    for (i = 0; i < scores.length; i++) {
+        // creates one li item
+        var li = document.createElement('li')
+
+        // adds the initials and score to the li
+        li.innerHTML = ` ${scores[i].initials} - ${scores[i].score}`
+        // adds the li item from the line above to the ordered list
+        ol.appendChild(li)
     }
-
-    userInitials.textContent = initials;
-    userScore.textContent = score;
+    // adds the ordered list to the DOM
+    container.appendChild(ol)
 }
 
 function goBack () {
@@ -147,24 +156,14 @@ function setStatusClass(correct) {
     }
 }
 
-// function clearStatusClass(element) {
-//     // element.classList.remove('correct')
-//     correctMessage.classList.add('hide')
-//     // element.classList.remove('wrong')
-//     wrongMessage.classList.add('hide')
-// }
-
 submitButton.addEventListener('click', function(event) {
     event.preventDefault();
 
     var initials = document.querySelector('#initials').value;
     var score = timerCount
-    // highScores.push(`${initials - score}`)
+    
     highScores.push({initials: initials, score: score});
 
-
-    // localStorage.setItem('initials', initials);
-    // localStorage.setItem('score', score)
     localStorage.setItem('scores', JSON.stringify(highScores))
 
     console.log(highScores)
