@@ -51,15 +51,14 @@
                     <p>Your score: <span id="score" class="score">00</span></p>
 
                     <lable for="">Enter Initials</lable>
-                    <input type="text">
-                    <button id="submitBtn" class="btn">Submit</button>
+                    <input type="text" name="initials" id="initials">
+                    <button id="submit-button" class="submit-button btn">Submit</button>
                 </section>
 
                 <!-- phase 4 - high score -->
                 <section id="highscore-screen" class="highscores-screen hide">
-                    <ol>
-                        <li>PR - XX</li>
-                        <li>PR - XX</li>
+                    <ol id="highscore-list">
+                        <li><span id="user-initials">PR</span> - <span id="user-score">XX</span></li>
                     </ol>
                     <button id="go-back-button" class="btn">Go Back</button>
                     <button id="clear-highscores" class="btn">Clear Highscores</button>
